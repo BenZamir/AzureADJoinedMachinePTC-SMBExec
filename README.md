@@ -2,7 +2,8 @@ A fork of the Pass the Certificate tool by Mor Rubin: https://github.com/morRubi
 
 The original tool invokes remcomsvc which is detected as malicious by almost any vendor.
 The tool now simply creates a service with the given command, executes it and deletes the service.
-** Made for authorized Red Team engagements / experiments only! use at your own risk ****
+
+### ** Made for authorized Red Team engagements / experiments only! use at your own risk ****
 
 ## Installation
 The code is compatible with Python 3.6+
