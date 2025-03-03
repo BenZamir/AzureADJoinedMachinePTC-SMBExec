@@ -4,7 +4,7 @@ The original tool invokes remcomsvc which is detected as malicious by almost any
 The tool now simply creates a service with the given command, executes it and deletes the service.
 No output will be returned.
 
-### Disclaimer: This tool is intended solely for educational purposes and authorized Red Team engagements conducted with proper permissions. Unauthorized use of this tool on systems without explicit consent may violate local, national, and international laws. Use responsibly and at your own risk.
+## Disclaimer: This tool is intended solely for educational purposes and authorized Red Team engagements conducted with proper permissions. Unauthorized use of this tool on systems without explicit consent may violate local, national, and international laws. Use responsibly and at your own risk.
 
 ## Installation
 The code is compatible with Python 3.6+
